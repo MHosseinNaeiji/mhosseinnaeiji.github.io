@@ -1,32 +1,194 @@
-You are a web designer who builds one-page personal websites for students and early-career people. Build me a single-file personal website from my brief below.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammadhossein Naeiji · CS student specializing in AI</title>
+<meta name="description" content="CS student specializing in AI who bridges technical engineering and non-technical stakeholders.">
+<link rel="canonical" href="https://mhosseinnaeiji.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohammadhossein Naeiji · CS student specializing in AI">
+<meta property="og:description" content="CS student specializing in AI who bridges technical engineering and non-technical stakeholders.">
+<meta property="og:url" content="https://mhosseinnaeiji.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammadhossein Naeiji",
+  "url": "https://mhosseinnaeiji.github.io/",
+  "email": "mailto:naeiji@ualberta.ca",
+  "sameAs": [
+    "https://www.linkedin.com/in/mohammadhossein-naeiji-45846741a",
+    "https://github.com/MHosseinNaeiji"
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #fffaf3;
+    --card: #ffffff;
+    --text: #2b2622;
+    --muted: #6b6159;
+    --accent: #b4410f;
+    --line: #eadfce;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  header.hero { padding: 3.5rem 0 2rem; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.2; margin: 0; }
+  h1 { font-size: clamp(2rem, 7vw, 3rem); }
+  h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+  h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+  .oneliner { font-size: 1.2rem; margin: 1rem 0 1.25rem; max-width: 34rem; }
+  .now {
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+    font-size: .98rem;
+  }
+  .now strong { color: var(--text); }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: .8rem 1.4rem;
+    border-radius: 999px;
+  }
+  .btn:hover, .btn:focus-visible { background: #8f3209; }
+  a { color: var(--accent); }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+  section { padding: 2rem 0; border-top: 1px solid var(--line); }
+  mark { background: #ffee00; color: #000; padding: 0 .25em; border-radius: 3px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.25rem .75rem;
+    margin-bottom: 1rem;
+  }
+  .card .when { color: var(--muted); font-size: .92rem; margin: 0 0 .75rem; }
+  .card dl { margin: 0; }
+  .card dt { font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); }
+  .card dd { margin: 0 0 .85rem; }
+  ul.work { list-style: none; margin: 0; padding: 0; }
+  ul.work li {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: .25rem 1rem;
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  ul.work .date { color: var(--muted); font-size: .95rem; }
+  @media (max-width: 520px) {
+    ul.work li { grid-template-columns: 1fr; }
+  }
+  .contact { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
 
-Rules:
-- Write for ONE reader: a hiring manager in Microsoft. Every line should make sense to them.
-- First screen: my name, my one-liner, and one clear button for my next step (give me an role). The button links to my email or a link I gave you. Never invent one.
-- This is my home base for years, not a one-off page. Build it to grow.
-- A "Featured" section with my 2–3 strongest items. For each: the problem, the decision I made and why, the result, and the link. If any of those is missing, write a short [placeholder question] for me to answer, like [What did you decide here?]. If I gave no link, show no link. Never invent a link.
-- A "Work" section listing every other item from my brief, newest first: one line each with the date, what it was, and its link. Build it as a simple list I can keep adding to, and put this comment right above the first item: <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
-- A short "Now" line near the top: what I'm working on this month. Use a [placeholder] if I didn't say.
-- Never invent facts, numbers, employers, awards or quotes. If something is missing, leave a [placeholder] I can fill in.
-- Wrap every [placeholder] in a bright yellow <mark> so I can spot it. Never put a placeholder inside a link, the <title> or any meta tag: if something is missing there, just use my name. If I didn't give a link, leave the link out completely; never link to a site's homepage instead.
-- A short About (3 sentences max) built from what pulls me in and what makes me different. Then contact links: email, LinkedIn, GitHub.
-- Plain, specific language. Do not use: passionate, driven, results-oriented, leverage, synergy, innovative.
-- It should feel warm and friendly. Choose one accent colour and one or two Google Fonts that fit. Readable on a phone. Fast. No images I'd have to supply.
-- Make it easy to find when someone Googles my name: the page <title> is my full name, a middle dot, then a short label for what I do (for example "Priya Sharma · Rehab-tech developer"), my full name is in the first heading, add a meta description of my one-liner and Open Graph tags, and link to my LinkedIn and GitHub with rel="me".
-- Output one complete index.html file (all CSS inside it, no frameworks) in a single code block, and nothing else.
+  <header class="hero">
+    <h1>Mohammadhossein Naeiji</h1>
+    <p class="oneliner">CS student specializing in AI who bridges technical engineering and non-technical stakeholders.</p>
+    <p class="now"><strong>Now:</strong> <mark>[What are you working on this month?]</mark></p>
+    <a class="btn" href="mailto:naeiji@ualberta.ca?subject=Role%20for%20Mohammadhossein%20Naeiji">Email me about a role</a>
+  </header>
 
-My brief:
-Name: Mohammadhossein Naeiji
-What I do: studying in computer science Specialize in AI
-1. My one reader: a hiring manager in Microsoft
-2. The problem of theirs that pulls me in: AI things
-3. What I can prove:
--UofA Open House - 17 October 2026
-- natHacks - Oct-Nov 2026
-- RiseX  - 11,12,13 Nov 2026
-study in uofa in computer science in ai honors 
-I was a privet tutor
-4. What makes me different, and from whom: "I’m a CS student specializing in AI, but what truly differentiates me is my refusal to stay inside a comfortable tech bubble. I have eagerly accepted every diverse project and opportunity thrown my way, making me highly versatile. This mindset, paired with my strong interpersonal skills, allows me to act as a bridge between technical engineering and non-technical stakeholders. It taught me that technical genius means nothing if you can't communicate its value effectively to the world."
-5. What I want them to do next: give me an role
-Contact: naeiji@ualberta.ca · www.linkedin.com/in/mohammadhossein-naeiji-45846741a · github.com/MHosseinNaeiji
-My website will be: https://mhosseinnaeiji.github.io
+  <section id="featured">
+    <h2>Featured</h2>
+    <!-- To add a featured item: copy one article below, paste it, edit it. Keep this to 2–3 items. -->
+
+    <article class="card">
+      <h3>natHacks</h3>
+      <p class="when"><time datetime="2026-10">Oct–Nov 2026</time></p>
+      <dl>
+        <dt>Problem</dt>
+        <dd><mark>[What problem were you trying to solve at natHacks?]</mark></dd>
+        <dt>Decision</dt>
+        <dd><mark>[What did you decide here, and why?]</mark></dd>
+        <dt>Result</dt>
+        <dd><mark>[What was the result? Use real numbers only.]</mark></dd>
+      </dl>
+      <!-- Link: add one here only if you have it, e.g. <p><a href="...">See the project</a></p> -->
+    </article>
+
+    <article class="card">
+      <h3>RiseX</h3>
+      <p class="when"><time datetime="2026-11-11">11–13 Nov 2026</time></p>
+      <dl>
+        <dt>Problem</dt>
+        <dd><mark>[What problem were you trying to solve at RiseX?]</mark></dd>
+        <dt>Decision</dt>
+        <dd><mark>[What did you decide here, and why?]</mark></dd>
+        <dt>Result</dt>
+        <dd><mark>[What was the result? Use real numbers only.]</mark></dd>
+      </dl>
+      <!-- Link: add one here only if you have it -->
+    </article>
+
+    <article class="card">
+      <h3>UofA Open House</h3>
+      <p class="when"><time datetime="2026-10-17">17 Oct 2026</time></p>
+      <dl>
+        <dt>Problem</dt>
+        <dd><mark>[What was your part in the Open House, and what needed solving?]</mark></dd>
+        <dt>Decision</dt>
+        <dd><mark>[What did you decide here, and why?]</mark></dd>
+        <dt>Result</dt>
+        <dd><mark>[What was the result? Use real numbers only.]</mark></dd>
+      </dl>
+      <!-- Link: add one here only if you have it -->
+    </article>
+  </section>
+
+  <section id="work">
+    <h2>Work</h2>
+    <ul class="work">
+      <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
+      <li>
+        <span class="date"><mark>[Start year]</mark> – present</span>
+        <span>Honors degree in Computer Science, specializing in AI, University of Alberta</span>
+      </li>
+      <li>
+        <span class="date"><mark>[Dates?]</mark></span>
+        <span>Private tutor <mark>[What did you tutor, and for whom?]</mark></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a computer science student at the University of Alberta, and AI is what pulls me in. I say yes to projects outside my comfort zone, which has taught me to work well with people far beyond engineering. That lets me explain technical work to non-technical teammates, because good engineering only matters if people can see its value.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li><a href="mailto:naeiji@ualberta.ca">naeiji@ualberta.ca</a></li>
+      <li><a href="https://www.linkedin.com/in/mohammadhossein-naeiji-45846741a" rel="me">LinkedIn</a></li>
+      <li><a href="https://github.com/MHosseinNaeiji" rel="me">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>© Mohammadhossein Naeiji</footer>
+
+</div>
+</body>
+</html>
